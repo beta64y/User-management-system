@@ -31,7 +31,7 @@ namespace User_management_system.DataBase.Repository
         {
             foreach (User user in Userslist)
             {
-                if (email == "admin@gmail.com" && password == "123321")
+                if (email == "adminadmin@code.edu.az" && password == "Admin123")
                 {
                     return "admin";
                 }
