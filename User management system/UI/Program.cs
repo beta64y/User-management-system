@@ -15,6 +15,7 @@ namespace User_management_system.UI
             while (true)
             {
                 string command = Console.ReadLine();
+                
                 if(command == "/help")
                 {
                     Console.WriteLine("/exit - close program");
@@ -24,10 +25,14 @@ namespace User_management_system.UI
                     Console.WriteLine("/get_register_date - shows selected email in register date");
                     Console.WriteLine("/show_users - open admin panel (only admin can use this command)");
                 }
+                
+                
                 else if(command == "/exit")
                 {
                     break;
                 }
+                
+                
                 else if(command == "/register")
                 {
                     bool name_wrongChecker = false, lastname_wrongChecker = false, email_wrongChecker = false, password_wrongChecker = false, re_password_wrongChecker = false;
@@ -89,6 +94,8 @@ namespace User_management_system.UI
                     Console.WriteLine("You successfully registered, now you can login with your new account!");
 
                 }
+                
+                
                 else if(command == "/log_in")
                 {
                     Console.WriteLine("Enter Email :");
@@ -110,20 +117,28 @@ namespace User_management_system.UI
                     }
 
                 }
+                
+                
                 else if(command == "/log_in_info")
                 {
                     Console.WriteLine("Active account : " + person);
                 }
+                
+                
                 else if(command == "/get_register_date")
                 {
                     Console.WriteLine("Enter Email :");
                     string email = Console.ReadLine();
                     Console.WriteLine("Register date : " + UserRepository.WhenAdded(email));
                 }
+                
+                
                 else if(command == "/show_users")
                 {
                     UserRepository.Show_users(person);
                 }
+                
+                
                 else
                 {
                     Console.WriteLine("Command not Found , You Can Use /help Command for Get Information about Commads !");
