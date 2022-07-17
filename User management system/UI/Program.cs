@@ -22,7 +22,7 @@ namespace User_management_system.UI
                     Console.WriteLine("/log_in - allows you to log in");
                     Console.WriteLine("/log_in_info - show active account");
                     Console.WriteLine("/get_register_date - shows selected email in register date");
-                    Console.WriteLine("/admin_panel - open admin panel (only admin can use the admin panel)");
+                    Console.WriteLine("/show_users - open admin panel (only admin can use this command)");
                 }
                 else if(command == "/exit")
                 {
@@ -118,11 +118,11 @@ namespace User_management_system.UI
                 {
                     Console.WriteLine("Enter Email :");
                     string email = Console.ReadLine();
-                    Console.WriteLine(UserRepository.WhenAdded(email));
+                    Console.WriteLine("Register date : " + UserRepository.WhenAdded(email));
                 }
-                else if(command == "/admin_panel")
+                else if(command == "/show_users")
                 {
-                    UserRepository.Admin_Panel(person);
+                    UserRepository.Show_users(person);
                 }
                 else
                 {

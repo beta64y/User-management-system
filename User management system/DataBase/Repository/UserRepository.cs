@@ -53,13 +53,13 @@ namespace User_management_system.DataBase.Repository
             return "none";
             
         }
-        public static void Admin_Panel(string person)
+        public static void  Show_users(string person)
         {
             if (person == "admin")
             {
                 foreach (User user in Userslist)
                 {
-                    Console.WriteLine($"Name : \"{user.Name} {user.LastName}\" \nEmail : {user.Email} Password : {user.Password} Register Date : {user.Created.ToString()}");
+                    Console.WriteLine($"Name : \"{user.Name} {user.LastName}\" \nEmail : {user.Email} | Password : {user.Password} | ID : {user.Id} | Register Date : {user.Created.ToString()}");
                     Console.WriteLine("********************************************************");
                 }
             }
