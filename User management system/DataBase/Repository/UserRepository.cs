@@ -16,16 +16,6 @@ namespace User_management_system.DataBase.Repository
             User user = new User(name,lastname,email,password,created);
             Userslist.Add(user);
     }
-    public static void Remove(string email , string password)
-    {
-    foreach (User user in Userslist)
-            {
-                if(user.Email == email && user.Password == password)
-                {
-                    Userslist.Remove(user);
-                }
-            }
-    }
     public static string WhenAdded(string email)
         {
             foreach (User user in Userslist)
