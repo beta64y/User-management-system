@@ -39,9 +39,11 @@ namespace User_management_system.UI
                 {
                     bool name_wrongChecker = false, lastname_wrongChecker = false, email_wrongChecker = false, password_wrongChecker = false, re_password_wrongChecker = false;
                     string name = "", lastname = "", email = "", password = "", re_password = "";
+                    
                     TextValidation textvalidation = new TextValidation();
                     EmailValidation emailvalidation = new EmailValidation();
                     PasswordValidation passwordvalidation = new PasswordValidation();
+
                     while(!textvalidation.IsCorrect(name))
                     {
                         if(name_wrongChecker)
@@ -52,6 +54,8 @@ namespace User_management_system.UI
                         name = Console.ReadLine();
                         name_wrongChecker = true;
                     }
+
+
                     while(!textvalidation.IsCorrect(lastname))
                     {
                         if (lastname_wrongChecker)
@@ -62,6 +66,8 @@ namespace User_management_system.UI
                         lastname = Console.ReadLine();
                         lastname_wrongChecker = true;
                     }
+
+
                     while(!emailvalidation.IsCorrect(email))
                     {
                         if (email_wrongChecker)
@@ -72,6 +78,8 @@ namespace User_management_system.UI
                         email = Console.ReadLine();
                         email_wrongChecker = true;
                     }
+
+
                     while (!passwordvalidation.IsCorrect(password))
                     {
                         if (password_wrongChecker)
@@ -82,6 +90,8 @@ namespace User_management_system.UI
                         password = Console.ReadLine();
                         password_wrongChecker = true;
                     }
+
+
                     while (!(password == re_password))
                     {
                         if (re_password_wrongChecker)
@@ -92,6 +102,8 @@ namespace User_management_system.UI
                         re_password = Console.ReadLine();
                         re_password_wrongChecker = true;
                     }
+
+
                     UserRepository.Add(name, lastname, email, password);
                     Console.WriteLine("You successfully registered, now you can login with your new account!");
 
@@ -102,9 +114,12 @@ namespace User_management_system.UI
                 {
                     Console.WriteLine("Enter Email :");
                     string email = Console.ReadLine();
+
                     Console.WriteLine("Enter Password:");
                     string password = Console.ReadLine();
+
                     person = UserRepository.LogIn(email, password);
+
                     if(person == "none")
                     {
                         Console.WriteLine("Email or password is incorrect");
