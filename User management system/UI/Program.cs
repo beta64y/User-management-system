@@ -29,7 +29,9 @@ namespace User_management_system.UI
                 
                 else if(command == "/exit")
                 {
+                    Console.WriteLine("May the Force be with you");
                     break;
+                    
                 }
                 
                 
