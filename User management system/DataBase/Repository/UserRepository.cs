@@ -31,7 +31,7 @@ namespace User_management_system.DataBase.Repository
         {
             foreach (User user in Userslist)
             {
-                if (email == "adminadmin@code.edu.az" && password == "Admin123")
+                if (email == "admin@gmail.com" && password == "123321")
                 {
                     return "admin";
                 }
@@ -53,7 +53,7 @@ namespace User_management_system.DataBase.Repository
                     Console.WriteLine("********************************************************");
                 }
             }
-            else { Console.WriteLine("Only admin can use the admin panel"); }
+            else { Console.WriteLine("Only admin can use this command"); }
 
         }
         

@@ -10,7 +10,7 @@ namespace User_management_system.UI
         static void Main(string[] args)
         {
             string person = "none";
-            UserRepository.Add("Admin", "Admin", "adminadmin@code.edu.az", "Admin123");
+            UserRepository.Add("Super","Admin","admin@gmail.com","123321");
             Console.WriteLine("Hi , You Can Use /help Command for Get Information about Commads !"); 
             while (true)
             {
